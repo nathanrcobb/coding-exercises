@@ -1,5 +1,5 @@
 # interview-prep
 Interview-Prep
 
-## Interview Questions
-1) Amazon Customer Reviews [Amazon Sample Question]
+## Exercises
+Day 1) Amazon Customer Reviews [Amazon Sample Question]
