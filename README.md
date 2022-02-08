@@ -1,5 +1,5 @@
-# interview-prep
-Interview-Prep
+# coding-exercises
+Coding Exercises
 
 ## Exercises
 1) Amazon Customer Reviews [Amazon Sample Question]
