@@ -31,16 +31,19 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
 """
 
-
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        longest = 0
+        longest = ""
+        # Base case
         if len(s) == 1:
             return 1
-        for i in range(len(s)):
-            for j in range(len(s),0,-1):
+        for i in range(len(s)+1):
+            for j in range(i,len(s)+1):
                 substr = s[i:j]
                 if len(set(substr)) == len(substr):
-                    if len(substr) > longest:
-                        longest = len(substr)
-        return longest
+                    if len(substr) > len(longest):
+                        longest = substr
+                else:
+                    i = j
+                    break
+        return len(longest)
