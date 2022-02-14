@@ -22,9 +22,10 @@ Data Structures
 1) Lists
   Python Lists are ordered collections of data just like arrays in other programming languages. It allows different types of elements in the list. The implementation of Python List is similar to Vectors in C++ or ArrayList in JAVA. The costly operation is inserting or deleting the element from the beginning of the List as all the elements are needed to be shifted. Insertion and deletion at the end of the list can also become costly in the case where the preallocated memory becomes full.
 """
+"""
 # Definition of a list
 l = ['t','e','s','t','l','i','s','t']
-
+"""
 
 """
 2) Tuples
@@ -57,6 +58,8 @@ l = ['t','e','s','t','l','i','s','t']
   A linked list is represented by a pointer to the first node of the linked list. The first node is called the head. If the linked list is empty, then the value of the head is NULL. Each node in a list consists of at least two parts:
     -Data
     -Pointer (Or Reference) to the next node
+"""
+
 """
 # Node class
 class Node:
@@ -96,7 +99,7 @@ if __name__=='__main__':
     second.next = third; # Link second node with the third node
   
     llist.printList()
-
+"""
 """
 7) Stack (collections.deque)
   A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) or First-In/Last-Out (FILO) manner. In stack, a new element is added at one end and an element is removed from that end only. The insert and delete operations are often called push and pop.
@@ -108,10 +111,15 @@ if __name__=='__main__':
     -append(a): Inserts the element 'a' at the top of the stack [Time Complexity: O(1)]
     -pop(): Deletes the topmost element of the stack [Time Complexity: O(1)]
 """
-
+"""
 from collections import deque
-stack = deque
-
+stack = deque()
+stack.append("A")
+stack.append("B")
+stack.append("C")
+stack.append(stack.popleft())
+print(stack)
+"""
 """
 8) Queue
   As a stack, the queue is a linear data structure that stores items in a First In First Out (FIFO) manner. With a queue, the least recently added item is removed first. A good example of the queue is any queue of consumers for a resource where the consumer that came first is served first.
@@ -130,10 +138,16 @@ stack = deque
 
   Generally, Heaps can be of two types:
 
-  Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
-  Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of it’s children. The same property must be recursively true for all sub-trees in that Binary Tree.
+  Max-Heap: In a Max-Heap the key present at the root node must be greatest among the keys present at all of its children. The same property must be recursively true for all sub-trees in that Binary Tree.
+  Min-Heap: In a Min-Heap the key present at the root node must be minimum among the keys present at all of its children. The same property must be recursively true for all sub-trees in that Binary Tree.
 """
+import heapq
 
+x = [1,8,34,8,0,5,6,9,9,4,43,7,2,2,6,67546,756756,67]
+
+print(x)
+heapq.heapify(x)
+print(x)
 
 """
 10) Binary Tree
