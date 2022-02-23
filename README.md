@@ -1,6 +1,2 @@
 # coding-exercises
-Coding Exercises
-
-## Exercises
-1) Amazon Customer Reviews [Amazon Sample Question]
-2) Javascript Sorting Problem [AV Help]
+Various coding exercises to keep algorithms and data structures skills current.
