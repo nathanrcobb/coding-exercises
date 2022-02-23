@@ -23,17 +23,17 @@ Write a function for finding the index of the “rotation point”, which is whe
 '''
 
 word_list = [ 
+  'ptolemaic',
+  'retrograde',
+  'supplant',
+  'undulate',
+  'xenoepist',
   'asymptote',
   'babka',  
   'banoffee',
   'engender',
   'karpatka',
   'othellolagkage',
-  'ptolemaic',
-  'retrograde',
-  'supplant',
-  'undulate',
-  'xenoepist',
   ]
 
 def findRotationPoint(word_list: list) -> int:
@@ -42,6 +42,9 @@ def findRotationPoint(word_list: list) -> int:
     end = len(word_list)
     
     
+    if word_list[-1] > word_list[0]:
+        return 0
+
     # Compare strings for recursion
     while(found < 0):
         halfway = start + ((end-start) // 2)
@@ -51,17 +54,9 @@ def findRotationPoint(word_list: list) -> int:
             found = halfway
         elif word_list[0] < word_list[halfway]:
             start = halfway
-            #end = end-start
-        
         else:
-            #start = 0
             end = halfway
-            
-        print(start, end)
         
-    print("Found rotation point: %d" %(found))
+    return found
     
-def algorithm(word_list: list):
-    findRotationPoint(word_list)
-    
-algorithm(word_list)
+print(findRotationPoint(word_list))
